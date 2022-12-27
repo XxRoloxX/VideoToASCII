@@ -40,6 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/wieslaw/Projects/VideoToASCII",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,6 +48,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672142409969</updated>
-      <workItem from="1672151639969" duration="13696000" />
+      <workItem from="1672151639969" duration="14203000" />
     </task>
     <task id="LOCAL-00001" summary="Creating single frames from video using ffmpeg">
       <created>1672152028029</created>
@@ -92,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672165472678</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added VideoToASCII.jar to repo">
+      <created>1672166208551</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672166208551</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +117,7 @@
     <MESSAGE value="Added countdown and refactorized VideoToASCII" />
     <MESSAGE value="Added possibility to run Main from console and added handling for incorrect filepath" />
     <MESSAGE value="Added modification of sleep time from console" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added modification of sleep time from console" />
+    <MESSAGE value="Added VideoToASCII.jar to repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added VideoToASCII.jar to repo" />
   </component>
 </project>
