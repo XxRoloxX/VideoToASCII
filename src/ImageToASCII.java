@@ -2,22 +2,27 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class ImageToASCII {
     BufferedImage image;
+    InputStream fileHandler;
+
     String ASCIIImage;
     int width;
     int height;
     public ImageToASCII(){
         width=0;
         height=0;
+        fileHandler=null;
     }
 
     public boolean openFile(String filePath){
 
         try {
-            File fileHandler = new File(filePath);
+            fileHandler = new FileInputStream(filePath);
            image = ImageIO.read(fileHandler);
            width = image.getWidth();
            height = image.getHeight();
@@ -43,6 +48,16 @@ public class ImageToASCII {
             result.append('\n');
         }
         ASCIIImage = result.toString();
+
+        if (fileHandler != null) {
+            try {
+                fileHandler.close();
+            } catch (IOException ex) {
+                System.out.println("ERROR closing image input stream: "+ex.getMessage()+ ex);
+            }
+        }
+        fileHandler=null;
+        image=null;
 
     }
     public void printASCIIImage(){

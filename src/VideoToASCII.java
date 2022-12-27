@@ -44,6 +44,7 @@ public class VideoToASCII {
         String name;
         boolean opened;
 
+        emptyDirectory("frames/");
         createFrames(videoName);
 
         for(int i=0;i<frames.length;i++){
