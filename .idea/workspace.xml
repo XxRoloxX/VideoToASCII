@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6b57e6f-a856-4b03-a1d6-985e29c31ee6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/StringToASCII.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VideoToASCII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoToASCII.java" afterDir="false" />
@@ -60,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672142409969</updated>
-      <workItem from="1672151639969" duration="10421000" />
+      <workItem from="1672151639969" duration="11532000" />
     </task>
     <task id="LOCAL-00001" summary="Creating single frames from video using ffmpeg">
       <created>1672152028029</created>
@@ -76,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672153274700</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added countdown and refactorized VideoToASCII">
+      <created>1672162847850</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672162847850</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +91,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creating single frames from video using ffmpeg" />
     <MESSAGE value="Optimized memory usage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimized memory usage" />
+    <MESSAGE value="Added countdown and refactorized VideoToASCII" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added countdown and refactorized VideoToASCII" />
   </component>
 </project>

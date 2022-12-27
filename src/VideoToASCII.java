@@ -26,7 +26,8 @@ public class VideoToASCII {
             return true;
         }
     }
-    public void executeComannd(String command){
+    public int executeComannd(String command){
+
         try {
             Process p = new ProcessBuilder("/bin/sh","-c",command)
                     .redirectErrorStream(true)
@@ -34,9 +35,12 @@ public class VideoToASCII {
                     .start();
             p.waitFor();
             System.out.println(p.exitValue() + p.info().toString());
+            return p.exitValue();
         }catch(Exception e){
             System.out.println(e);
+            return 1;
         }
+
     }
 
     public String drawString(String text, String charToDraw, int imageWidth, int imageHeight, int fontSize, int xPosition, int yPosition){
@@ -65,24 +69,31 @@ public class VideoToASCII {
     public void displayCountdown(int time) {
         Integer number;
 
-        for(int i=time;i>=0;i--){
-            ImageToASCII.clearScreen();
-            number = i;
-            System.out.print(drawString(number.toString(), "#", frames.get(0).width,frames.get(0).height, (int) (frames.get(0).height*0.6), (int) (frames.get(0).width*0.4), (int) (frames.get(0).height*0.7)));
-            try {
-                Thread.sleep(1000);
-            }catch(InterruptedException e){
-                System.out.println(e);
+        if(frames.size()>0) {
+            for (int i = time; i >= 0; i--) {
+                ImageToASCII.clearScreen();
+                number = i;
+                System.out.print(drawString(number.toString(), "#", frames.get(0).width, frames.get(0).height, (int) (frames.get(0).height * 0.6), (int) (frames.get(0).width * 0.4), (int) (frames.get(0).height * 0.7)));
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    System.out.println(e);
+                }
             }
+            ImageToASCII.clearScreen();
         }
-        ImageToASCII.clearScreen();
 
     }
 
-    public void createFrames(String videoName){
+    public boolean createFrames(String videoName){
         //String[] cmd={"ffmpeg","-i",videoName,"-vf","fps=30","/home/wieslaw/Video/out%d.png"};
         String cmd = "ffmpeg"+" -i "+videoName +" -vf " +" fps=30 "+"frames/out%d.png";
-        executeComannd(cmd);
+        if(executeComannd(cmd)!=0){
+            return false;
+        }else{
+            return true;
+        }
+
     }
     public boolean createDirectory(String path){
         File handler = new File(path);
@@ -105,7 +116,11 @@ public class VideoToASCII {
         int i=0;
         System.out.println(createDirectory("frames"));
         emptyDirectory("frames/");
-        createFrames(videoName);
+
+        if(!createFrames(videoName)){
+            System.out.println("Incorrect filepath");
+            return;
+        };
 
         while(opened){
             name=outputFileName+(i+1)+".png";
