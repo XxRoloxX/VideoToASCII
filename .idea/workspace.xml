@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6b57e6f-a856-4b03-a1d6-985e29c31ee6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="b6b57e6f-a856-4b03-a1d6-985e29c31ee6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672142409969</updated>
-      <workItem from="1672151639969" duration="13032000" />
+      <workItem from="1672151639969" duration="13696000" />
     </task>
     <task id="LOCAL-00001" summary="Creating single frames from video using ffmpeg">
       <created>1672152028029</created>
@@ -88,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672163999226</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added modification of sleep time from console">
+      <created>1672165472678</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672165472678</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +103,7 @@
     <MESSAGE value="Optimized memory usage" />
     <MESSAGE value="Added countdown and refactorized VideoToASCII" />
     <MESSAGE value="Added possibility to run Main from console and added handling for incorrect filepath" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added possibility to run Main from console and added handling for incorrect filepath" />
+    <MESSAGE value="Added modification of sleep time from console" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added modification of sleep time from console" />
   </component>
 </project>
