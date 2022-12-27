@@ -7,7 +7,6 @@
     <list default="true" id="b6b57e6f-a856-4b03-a1d6-985e29c31ee6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VideoToASCII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoToASCII.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672142409969</updated>
-      <workItem from="1672151639969" duration="11532000" />
+      <workItem from="1672151639969" duration="13032000" />
     </task>
     <task id="LOCAL-00001" summary="Creating single frames from video using ffmpeg">
       <created>1672152028029</created>
@@ -82,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672162847850</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added possibility to run Main from console and added handling for incorrect filepath">
+      <created>1672163999226</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672163999226</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +98,7 @@
     <MESSAGE value="Creating single frames from video using ffmpeg" />
     <MESSAGE value="Optimized memory usage" />
     <MESSAGE value="Added countdown and refactorized VideoToASCII" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added countdown and refactorized VideoToASCII" />
+    <MESSAGE value="Added possibility to run Main from console and added handling for incorrect filepath" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added possibility to run Main from console and added handling for incorrect filepath" />
   </component>
 </project>
