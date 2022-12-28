@@ -12,6 +12,8 @@ public class VideoToASCII {
     final static int DEFAULT_SLEEP_TIME=17;
     private ArrayList<ImageToASCII> frames;
     int sleepTime;
+    int videoWidth;
+    int videoHeight;
 
     public VideoToASCII(){
         frames = new ArrayList();
@@ -58,6 +60,7 @@ public class VideoToASCII {
 
             for (int x = 0; x < imageWidth; x++) {
                 stringBuilder.append(image.getRGB(x, y) <= -16000000 ? " ": charToDraw);
+                stringBuilder.append("  ");
             }
             stringBuilder.append("\n");
 
@@ -66,6 +69,11 @@ public class VideoToASCII {
         return stringBuilder.toString();
 
     }
+
+    public void printCenteredString(String text, String charToDraw){
+        ImageToASCII.clearScreen();
+        System.out.print(drawString(text, charToDraw, videoWidth, videoHeight, (int) (videoHeight * 0.6), (int) (videoWidth * 0.2), (int) (videoHeight * 0.7)));
+    }
     public void displayCountdown(int time) {
         Integer number;
 
@@ -73,7 +81,7 @@ public class VideoToASCII {
             for (int i = time; i >= 0; i--) {
                 ImageToASCII.clearScreen();
                 number = i;
-                System.out.print(drawString(number.toString(), "#", frames.get(0).width, frames.get(0).height, (int) (frames.get(0).height * 0.6), (int) (frames.get(0).width * 0.4), (int) (frames.get(0).height * 0.7)));
+                System.out.print(drawString(number.toString(), "#", videoWidth, videoHeight, (int)( videoHeight * 0.6), (int) (videoWidth * 0.4), (int) (videoHeight * 0.7)));
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
@@ -84,6 +92,7 @@ public class VideoToASCII {
         }
 
     }
+
 
     public boolean createFrames(String videoName){
         //String[] cmd={"ffmpeg","-i",videoName,"-vf","fps=30","/home/wieslaw/Video/out%d.png"};
@@ -135,6 +144,9 @@ public class VideoToASCII {
             i++;
         }
         frames.remove(frames.size()-1);
+        videoWidth = frames.get(0).width;
+        videoHeight = frames.get(0).height;
+
         emptyDirectory("frames/");
         deleteDirectory("frames");
 

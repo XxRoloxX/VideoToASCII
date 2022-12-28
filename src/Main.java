@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -7,11 +9,30 @@ public class Main {
         if(args.length>0){
             video.setSleepTime(Integer.parseInt(args[1]));
         }
-        video.loadVideo(args[0]);
+        if(args.length>2){
+            if(args[2].equals("-l")){
+                video.loadVideo(args[0]);
+                while(true){
+                    video.printImages();
 
-        video.displayCountdown(3);
+                }
+            }
+        }else{
 
-        video.printImages();
+            video.loadVideo(args[0]);
+
+            video.displayCountdown(3);
+
+            video.printImages();
+
+            ImageToASCII.clearScreen();
+
+
+
+            video.printCenteredString("END", "#");
+        }
+
+
 
     }
 }
