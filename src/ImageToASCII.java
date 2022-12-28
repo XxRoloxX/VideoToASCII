@@ -10,6 +10,7 @@ public class ImageToASCII {
     BufferedImage image;
     InputStream fileHandler;
 
+
     String ASCIIImage;
     int width;
     int height;
@@ -43,7 +44,8 @@ public class ImageToASCII {
 
         for(int i=0;i<height;i++){
             for(int j=0;j<width;j++){
-                result.append(image.getRGB(j,i) <= -1600000 ? '*': ' ');
+                result.append(image.getRGB(j,i) <= -1600000 ? ' ': '*');
+                result.append("  ");
             }
             result.append('\n');
         }
